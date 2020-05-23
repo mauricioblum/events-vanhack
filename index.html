@@ -1,0 +1,95 @@
+<!-- Enter your HTML code here. Plagiarism will NOT be tolerated!
+Remember, your solution will be manually evaluated within 15 business days. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="styles.css" rel="stylesheet" />
+    <title>VanHack Events</title>
+  </head>
+  <body>
+    <div id="overlay"></div>
+    <header>
+      <div><h1 class="title">VanHack Events</h1></div>
+    </header>
+    <main>
+      <div class="main-container" id="events">
+        <h2>Upcoming events/activities</h2>
+
+        <section id="all-events" class="events-section"></section>
+      </div>
+
+      <div class="main-container hidden" id="event-page">
+        <div class="background">
+          <div class="back-container">
+            <button type="button" id="back" onclick="togglePages()">
+              <i class="material-icons">chevron_left</i> Go Back
+            </button>
+          </div>
+          <div class="event-details">
+            <h2 id="event-title-page">Event Title</h2>
+
+            <div class="cards">
+              <div class="calendar">
+                <p id="day" class="day">22</p>
+                <span id="month">May</span>
+              </div>
+
+              <div class="location-info">
+                <p id="week-time" class="week-time">
+                  Wednesday 10:00 17:00 EST
+                </p>
+                <span id="event-location">Vancouver-Canada</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="event-section">
+          <div class="event-content">
+            <h3><i class="material-icons">event_note</i> About the event</h3>
+            <p id="event-description">Description of the event...</p>
+
+            <h3><i class="material-icons">share</i>Share with your friends</h3>
+
+            <div class="event-share">
+              <ul>
+                <li><a target="_blank" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fvanhack.com/platform/%23/events"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                <li><a target="_blank" href="http://twitter.com/share?text=Check out these awesome events from VanHack!&url=https://vanhack.com/platform/%23/events"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+
+            <div class="event-apply">
+              <p id="deadline">DEADLINE: <span>03/05/2020</span></p>
+              <button type="button" id="event-apply-button" class="apply-button">Apply now</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <div class="modal hidden" id="modal">
+      <div class="modal-content">
+        <div id="modal-header" class="modal-header">
+          <button type="button" onclick="closeModal()"><i class="material-icons">close</i></button>
+          <i id="modal-icon" class="material-icons">check</i>
+          <h2 id="modal-title">THANK YOU FOR APPLYING!</h1>
+          </div>
+        <div id="modal-body" class="modal-body">
+          <h3 id="modal-subtitle">Stay tuned for the details that were sent to your e-mail!</h1>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
